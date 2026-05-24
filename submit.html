@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Submit Resume | Universal Recruiting Company</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>body{opacity:0}</style>
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────── -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-circle">UR</div>
+    <div class="logo-wordmark">
+      <span class="logo-name">Universal Recruiting</span>
+      <span class="logo-sub">Executive Search Co.</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li class="has-dropdown">
+      <a href="index.html">About</a>
+      <div class="nav-dropdown"><div class="nav-dropdown-box">
+        <a href="index.html">Home</a>
+        <a href="about.html">Overview</a>
+        <a href="differentiators.html">What Sets Us Apart</a>
+        <a href="industries.html">Industries We Serve</a>
+      </div></div>
+    </li>
+    <li class="has-dropdown">
+      <a href="roles.html">Open Roles</a>
+      <div class="nav-dropdown"><div class="nav-dropdown-box">
+        <a href="roles.html">All Roles</a>
+        <a href="process.html">Our Search Process</a>
+      </div></div>
+    </li>
+    <li><a href="submit.html" class="active">Submit Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="submit.html" class="btn btn-accent">Submit Resume</a>
+    <a href="contact.html" class="btn btn-white">Hire Talent</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── BREADCRUMB ──────────────────────────────────── -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span>›</span>
+  <span>Submit Resume</span>
+</div>
+
+<!-- ── PAGE TITLE ──────────────────────────────────── -->
+<div class="page-title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 120" preserveAspectRatio="xMidYMid slice" class="page-title-svg">
+  <defs>
+    <radialGradient id="ptGlowL" cx="0%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1B5FA8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#1B5FA8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ptGlowR" cx="100%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1B5FA8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#1B5FA8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ptGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9A84C" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#C9A84C" stop-opacity="0.65"/>
+      <stop offset="55%" stop-color="#E8C97A" stop-opacity="0.75"/>
+      <stop offset="80%" stop-color="#C9A84C" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ptArc1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2E7DD1" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#2E7DD1" stop-opacity="0.38"/>
+      <stop offset="70%" stop-color="#2E7DD1" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#2E7DD1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ptArc2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2E7DD1" stop-opacity="0.1"/>
+      <stop offset="45%" stop-color="#2E7DD1" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#2E7DD1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="-20" cy="60" rx="180" ry="120" fill="url(#ptGlowL)"/>
+  <ellipse cx="700" cy="60" rx="180" ry="120" fill="url(#ptGlowR)"/>
+  <path d="M0,120 C80,75 200,35 400,50 C520,58 620,70 680,55 L680,120 Z" fill="#0F2A4E" fill-opacity="0.55"/>
+  <path d="M0,120 C60,90 150,60 320,72 C450,82 580,88 680,78 L680,120 Z" fill="#112E55" fill-opacity="0.4"/>
+  <path d="M0,120 C100,100 250,85 420,90 C530,93 610,95 680,90 L680,120 Z" fill="#0F2A4E" fill-opacity="0.3"/>
+  <path d="M-10,95 C80,55 220,20 400,38 C530,50 620,58 700,35" fill="none" stroke="url(#ptArc1)" stroke-width="1"/>
+  <path d="M-10,108 C100,75 260,48 430,60 C560,70 640,75 700,62" fill="none" stroke="url(#ptArc2)" stroke-width="0.8"/>
+  <path d="M20,88 C120,78 280,68 440,75 C560,80 630,84 660,82" fill="none" stroke="url(#ptGold)" stroke-width="1.5"/>
+  <circle cx="610" cy="55" r="38" fill="none" stroke="#2E7DD1" stroke-width="0.7" stroke-opacity="0.14"/>
+  <circle cx="610" cy="55" r="54" fill="none" stroke="#2E7DD1" stroke-width="0.5" stroke-opacity="0.09"/>
+</svg>
+  <p class="page-eyebrow">Confidential &amp; Secure</p>
+  <h1>Submit Your Resume</h1>
+  <p>A Universal Recruiting recruiter will review your profile and be in touch within 1–2 business days.</p>
+</div>
+
+<!-- ── SUBMIT SECTION ──────────────────────────────── -->
+<div class="submit-section">
+
+  <!-- Decorative resume document -->
+  <svg class="resume-canvas" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <rect x="10" y="10" width="280" height="380" rx="3" fill="#fff" fill-opacity="0.55" stroke="#003594" stroke-width="1" stroke-opacity="0.13"/>
+    <rect x="16" y="16" width="280" height="380" rx="3" fill="none" stroke="#003594" stroke-width="0.5" stroke-opacity="0.06"/>
+    <rect x="10" y="10" width="5" height="380" fill="#003594" fill-opacity="0.14"/>
+    <!-- Name -->
+    <rect x="30" y="28" width="165" height="12" rx="2" fill="#003594" fill-opacity="0.22"/>
+    <rect x="30" y="46" width="115" height="7" rx="2" fill="#003594" fill-opacity="0.13"/>
+    <rect x="30" y="59" width="195" height="5.5" rx="2" fill="#003594" fill-opacity="0.08"/>
+    <!-- Divider -->
+    <rect x="24" y="76" width="264" height="1.5" rx="1" fill="#003594" fill-opacity="0.15"/>
+    <!-- Experience -->
+    <rect x="24" y="88" width="72" height="7" rx="2" fill="#003594" fill-opacity="0.22"/>
+    <rect x="24" y="102" width="225" height="5.5" rx="2" fill="#003594" fill-opacity="0.10"/>
+    <rect x="24" y="113" width="195" height="5.5" rx="2" fill="#003594" fill-opacity="0.08"/>
+    <rect x="24" y="124" width="210" height="5.5" rx="2" fill="#003594" fill-opacity="0.08"/>
+    <rect x="24" y="135" width="178" height="5.5" rx="2" fill="#003594" fill-opacity="0.06"/>
+    <!-- Divider -->
+    <rect x="24" y="152" width="264" height="1" rx="1" fill="#003594" fill-opacity="0.09"/>
+    <!-- Education -->
+    <rect x="24" y="162" width="62" height="7" rx="2" fill="#003594" fill-opacity="0.22"/>
+    <rect x="24" y="176" width="205" height="5.5" rx="2" fill="#003594" fill-opacity="0.10"/>
+    <rect x="24" y="187" width="158" height="5.5" rx="2" fill="#003594" fill-opacity="0.08"/>
+    <!-- Divider -->
+    <rect x="24" y="204" width="264" height="1" rx="1" fill="#003594" fill-opacity="0.09"/>
+    <!-- Skills -->
+    <rect x="24" y="214" width="48" height="7" rx="2" fill="#003594" fill-opacity="0.22"/>
+    <rect x="24" y="228" width="235" height="5.5" rx="2" fill="#003594" fill-opacity="0.10"/>
+    <rect x="24" y="239" width="205" height="5.5" rx="2" fill="#003594" fill-opacity="0.08"/>
+    <rect x="24" y="250" width="218" height="5.5" rx="2" fill="#003594" fill-opacity="0.06"/>
+    <!-- Divider -->
+    <rect x="24" y="268" width="264" height="1" rx="1" fill="#003594" fill-opacity="0.09"/>
+    <!-- Achievements -->
+    <rect x="24" y="278" width="88" height="7" rx="2" fill="#003594" fill-opacity="0.22"/>
+    <rect x="24" y="292" width="220" height="5.5" rx="2" fill="#003594" fill-opacity="0.10"/>
+    <rect x="24" y="303" width="188" height="5.5" rx="2" fill="#003594" fill-opacity="0.08"/>
+    <rect x="24" y="314" width="202" height="5.5" rx="2" fill="#003594" fill-opacity="0.08"/>
+    <rect x="24" y="325" width="162" height="5.5" rx="2" fill="#003594" fill-opacity="0.06"/>
+  </svg>
+
+  <div class="submit-inner">
+
+    <!-- Success message (hidden until form submitted) -->
+    <div class="submit-success" id="success-msg">
+      <div class="success-icon">&#10003;</div>
+      <h2>Resume Received</h2>
+      <p>Your resume is in good hands. We'll review your profile and be in touch within 1–2 business days.</p>
+      <a href="index.html" class="btn btn-navy btn-lg">Back to Home</a>
+    </div>
+
+    <!-- Form -->
+    <div id="form-wrapper">
+
+      <form id="resume-form" enctype="multipart/form-data" novalidate>
+
+        <!-- Name / Email -->
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label>Full Name <span class="req">*</span></label>
+            <input type="text" name="name" required placeholder="Jane Smith" />
+          </div>
+          <div class="form-field">
+            <label>Email Address <span class="req">*</span></label>
+            <input type="email" name="email" required placeholder="jane@example.com" />
+          </div>
+        </div>
+
+        <!-- Phone / Role -->
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="(555) 000-0000" />
+          </div>
+          <div class="form-field">
+            <label>Role of Interest <span class="req">*</span></label>
+            <select name="role" required>
+              <option value="" disabled selected>Select a role&hellip;</option>
+              <option>VP / Director of Sales</option>
+              <option>Sales Management</option>
+              <option>Account Executive</option>
+              <option>Sales Engineer / Presales</option>
+              <option>Entry Level Sales</option>
+              <option>Implementation Specialist</option>
+              <option>Software Engineer</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="form-field">
+          <label>LinkedIn URL</label>
+          <input type="url" name="linkedin" placeholder="https://linkedin.com/in/your-profile" />
+        </div>
+
+        <!-- File upload -->
+        <div class="form-field">
+          <label>Resume <span class="req">*</span></label>
+        </div>
+        <div class="file-drop" id="file-drop">
+          <input type="file" name="attachment" id="file-input" accept=".pdf,.doc,.docx" required />
+          <div class="file-drop-icon" id="file-icon">&#8679;</div>
+          <p class="file-drop-text" id="file-text">Drag &amp; drop your resume here</p>
+          <p class="file-drop-hint" id="file-hint">or click to browse &mdash; PDF, DOC, DOCX &middot; max 5 MB</p>
+        </div>
+
+        <!-- Cover message -->
+        <div class="form-field">
+          <label>Cover Message</label>
+          <textarea name="message" placeholder="Brief note about your background, target market, or ideal role&hellip;"></textarea>
+        </div>
+
+        <!-- Error message -->
+        <p id="form-error" style="display:none;color:#c0392b;font-size:14px;background:#fdf0f0;border:1px solid #f5c6c6;border-radius:3px;padding:12px 16px;margin-bottom:16px;"></p>
+
+        <button type="submit" id="submit-btn" class="btn btn-navy btn-lg" style="width:100%;margin-bottom:12px;">
+          Submit Resume
+        </button>
+
+        <p class="form-disclaimer">
+          By submitting, you authorize Universal Recruiting to present your profile to relevant clients. Your consent is required before any disclosure.
+        </p>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── FOOTER ──────────────────────────────────────── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img loading="lazy" src="brand_assets/universal-recruiting-logo@4x.png" alt="Universal Recruiting Company" />
+      <p>A global executive search firm specializing in enterprise sales and technology talent placement.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <ul>
+        <li><a href="about.html">About Universal Recruiting</a></li>
+        <li><a href="roles.html">Open Roles</a></li>
+        <li><a href="submit.html">Submit Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:phil@universalrecruiting.com">phil@universalrecruiting.com</a></li>
+        <li><a href="mailto:scbesso@universalrecruiting.com">scbesso@universalrecruiting.com</a></li>
+        <li><a href="tel:3019631006">301-963-1006</a></li>
+        <li><a href="tel:6192291099">619-229-1099</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Offices</h5>
+      <p>Clarksburg, MD<br />Less than 15 mi from D.C.<br /><br />San Diego, CA<br />West Coast Office</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span class="copy-year">2026</span> Universal Recruiting Company. All rights reserved.</span>
+    <span>Clarksburg, MD &nbsp;&middot;&nbsp; San Diego, CA</span>
+  </div>
+</footer>
+
+<!-- ── LINKEDIN FIXED BUTTON ───────────────────────── -->
+<a href="https://www.linkedin.com/company/universal-recruiting-company/"
+   target="_blank" rel="noopener noreferrer"
+   style="position:fixed;bottom:24px;right:24px;z-index:999;display:block;width:52px;height:52px;border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s;"
+   onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 24px rgba(0,0,0,.28)'"
+   onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.18)'">
+  <img loading="lazy" src="linked in.png" alt="Universal Recruiting Company on LinkedIn" style="width:100%;height:100%;object-fit:cover;display:block;" />
+</a>
+
+<script>
+  const drop    = document.getElementById('file-drop');
+  const input   = document.getElementById('file-input');
+  const icon    = document.getElementById('file-icon');
+  const text    = document.getElementById('file-text');
+  const hint    = document.getElementById('file-hint');
+  const form    = document.getElementById('resume-form');
+  const btn     = document.getElementById('submit-btn');
+  const errEl   = document.getElementById('form-error');
+  const success = document.getElementById('success-msg');
+  const wrapper = document.getElementById('form-wrapper');
+
+  function showFile(file) {
+    icon.textContent = '📄';
+    text.textContent = file.name;
+    hint.textContent = 'Click to change file';
+    clearError(drop);
+  }
+
+  function markError(el) { el.classList.add('field-error'); }
+  function clearError(el) { el.classList.remove('field-error'); }
+
+  input.addEventListener('change', () => {
+    if (input.files[0]) showFile(input.files[0]);
+  });
+
+  form.querySelector('[name="name"]').addEventListener('input',   function() { clearError(this); });
+  form.querySelector('[name="email"]').addEventListener('input',  function() { clearError(this); });
+  form.querySelector('[name="role"]').addEventListener('change',  function() { clearError(this); });
+
+  drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('dragging'); });
+  drop.addEventListener('dragleave', () => drop.classList.remove('dragging'));
+  drop.addEventListener('drop', e => {
+    e.preventDefault();
+    drop.classList.remove('dragging');
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      const dt = new DataTransfer();
+      dt.items.add(file);
+      input.files = dt.files;
+      showFile(file);
+    }
+  });
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    errEl.style.display = 'none';
+
+    const nameEl  = form.querySelector('[name="name"]');
+    const emailEl = form.querySelector('[name="email"]');
+    const roleEl  = form.querySelector('[name="role"]');
+    let invalid = false;
+
+    if (!nameEl.value.trim())  { markError(nameEl);  invalid = true; }
+    if (!emailEl.value.trim()) { markError(emailEl); invalid = true; }
+    if (!roleEl.value)         { markError(roleEl);  invalid = true; }
+    if (!input.files[0])       { markError(drop);    invalid = true; }
+
+    if (invalid) return;
+
+    btn.textContent = 'Submitting…';
+    btn.disabled = true;
+
+    try {
+      const res  = await fetch('/submit-resume', { method: 'POST', body: new FormData(form) });
+      const json = await res.json();
+
+      if (json.success) {
+        wrapper.style.display = 'none';
+        success.classList.add('visible');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        errEl.textContent = json.message || 'Submission failed. Please try again.';
+        errEl.style.display = 'block';
+        btn.textContent = 'Submit Resume';
+        btn.disabled = false;
+      }
+    } catch {
+      errEl.textContent = 'Network error. Please try again or email us directly.';
+      errEl.style.display = 'block';
+      btn.textContent = 'Submit Resume';
+      btn.disabled = false;
+    }
+  });
+</script>
+
+<script src="transitions.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
