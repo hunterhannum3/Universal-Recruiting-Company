@@ -140,24 +140,6 @@
         'PMP certification or relevant platform certifications are a bonus',
       ],
     },
-    'other': {
-      tag: 'Other',
-      title: 'Other',
-      location: 'National',
-      level: 'All Levels',
-      overview: "Don't see your role listed? We recruit across a wide range of industries and functions. If you're a candidate with experience in any field or a client looking to fill a unique position, reach out directly — we'd love to learn more about what you're looking for.",
-      responsibilities: [
-        'Submit your resume and tell us about your background and goals',
-        'A recruiter will review your profile and reach out if there is a match',
-        'We work across industries including FinTech, HCM, WFM, HVAC, and more',
-        'Both active job seekers and passive candidates are welcome to connect',
-      ],
-      requirements: [
-        'Open to candidates at all levels and across all industries',
-        'Resume or LinkedIn profile recommended',
-        'Reach out directly to a recruiter on our Contact page for faster response',
-      ],
-    },
   };
 
   var backdrop = document.getElementById('role-modal-backdrop');
