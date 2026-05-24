@@ -107,7 +107,22 @@
   var yr = new Date().getFullYear();
   document.querySelectorAll('.copy-year').forEach(function (el) { el.textContent = yr; });
 
-  /* ── 7. Typewriter on hero h1 ────────────────────────────── */
+  /* ── 7. Back-to-top button ───────────────────────────────── */
+  var btt = document.createElement('button');
+  btt.id = 'back-to-top';
+  btt.setAttribute('aria-label', 'Back to top');
+  btt.innerHTML = '&#8679;';
+  document.body.appendChild(btt);
+
+  window.addEventListener('scroll', function () {
+    btt.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+
+  btt.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ── 8. Typewriter on hero h1 ────────────────────────────── */
   var heroH1 = document.querySelector('.hero h1');
   if (heroH1) {
     var full = heroH1.innerText;
