@@ -165,19 +165,6 @@
     },
   };
 
-  // Badge open-position counts onto cards that have openings
-  document.querySelectorAll('.role-card[data-role]').forEach(function (card) {
-    var role = ROLES[card.getAttribute('data-role')];
-    if (role && role.openings && role.openings.length > 0) {
-      var badge = document.createElement('span');
-      badge.className = 'role-openings-badge';
-      badge.textContent = role.openings.length === 1
-        ? '1 Open Position'
-        : role.openings.length + ' Open Positions';
-      card.appendChild(badge);
-    }
-  });
-
   var ROLE_TO_OPTION = {
     'vp-sales':                 'VP / Director of Sales',
     'sales-management':         'Sales Management',
