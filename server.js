@@ -56,7 +56,7 @@ async function sendNotification({ name, email, phone, role, linkedin, message, f
 }
 
 // Resumes land here on the Desktop
-const BASE_DIR = path.join(os.homedir(), "Desktop", "Universal Recruiting Resumes");
+const BASE_DIR = path.join(os.homedir(), "Library", "CloudStorage", "OneDrive-Personal", "Universal Recruiting Resumes");
 
 // Sanitize a role name into a safe folder name
 function roleFolder(role) {

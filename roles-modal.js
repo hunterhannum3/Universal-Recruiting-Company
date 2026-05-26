@@ -165,10 +165,33 @@
     },
   };
 
-  var backdrop = document.getElementById('role-modal-backdrop');
-  var modalBody = document.getElementById('role-modal-body');
-  var modal = document.getElementById('role-modal');
-  var closeBtn = document.getElementById('role-modal-close');
+  // Badge open-position counts onto cards that have openings
+  document.querySelectorAll('.role-card[data-role]').forEach(function (card) {
+    var role = ROLES[card.getAttribute('data-role')];
+    if (role && role.openings && role.openings.length > 0) {
+      var badge = document.createElement('span');
+      badge.className = 'role-openings-badge';
+      badge.textContent = role.openings.length === 1
+        ? '1 Open Position'
+        : role.openings.length + ' Open Positions';
+      card.appendChild(badge);
+    }
+  });
+
+  var ROLE_TO_OPTION = {
+    'vp-sales':                 'VP / Director of Sales',
+    'sales-management':         'Sales Management',
+    'account-executives':       'Account Executive',
+    'technical-sales':          'Sales Engineer / Presales',
+    'entry-level-sales':        'Entry Level Sales',
+    'implementation-engineers': 'Implementation Specialist',
+  };
+
+  var backdrop    = document.getElementById('role-modal-backdrop');
+  var modalBody   = document.getElementById('role-modal-body');
+  var modal       = document.getElementById('role-modal');
+  var closeBtn    = document.getElementById('role-modal-close');
+  var submitBtn   = document.getElementById('role-submit-btn');
 
   function buildOpenings(openings) {
     if (!openings || openings.length === 0) return '';
@@ -205,6 +228,10 @@
         '<h4>Requirements</h4>' +
         '<ul>' + role.requirements.map(function (r) { return '<li>' + r + '</li>'; }).join('') + '</ul>' +
       '</div>';
+
+    if (submitBtn && ROLE_TO_OPTION[roleKey]) {
+      submitBtn.href = 'submit.html?role=' + encodeURIComponent(ROLE_TO_OPTION[roleKey]);
+    }
 
     modal.scrollTop = 0;
     backdrop.classList.add('is-open');

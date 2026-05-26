@@ -370,5 +370,19 @@
 
 <script src="transitions.js"></script>
 <script src="site.js"></script>
+<script>
+  (function () {
+    var param = new URLSearchParams(window.location.search).get('role');
+    if (!param) return;
+    var sel = document.querySelector('select[name="role"]');
+    if (!sel) return;
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].text === param) {
+        sel.selectedIndex = i;
+        break;
+      }
+    }
+  })();
+</script>
 </body>
 </html>
