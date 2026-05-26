@@ -24,6 +24,10 @@
         'Strong analytical skills — comfortable with CRM data, forecasting, and revenue operations',
         'Experience in HCM, WFM, ERP, or related enterprise software is a strong plus',
       ],
+      openings: [
+        { title: 'Regional Sales Director, Benefits', location: 'National', file: 'job-descriptions/regional-sales-director-benefits.docx', download: 'Regional Sales Director Benefits.docx' },
+        { title: 'VP of Estimating', location: 'New York City', file: 'job-descriptions/vp-estimating-nyc.docx', download: 'VP Estimating NYC.docx' },
+      ],
     },
     'sales-management': {
       tag: 'Management',
@@ -46,6 +50,9 @@
         'Strong CRM fluency (Salesforce preferred) and pipeline management skills',
         'Excellent coaching, communication, and conflict-resolution skills',
         'Background in HR tech, workforce management, or related verticals a plus',
+      ],
+      openings: [
+        { title: 'Chief of Staff', location: 'National', file: 'job-descriptions/chief-of-staff.docx', download: 'Chief of Staff.docx' },
       ],
     },
     'account-executives': {
@@ -70,6 +77,14 @@
         'Proficiency with Salesforce or a comparable CRM platform',
         'Experience in HCM, payroll, ERP, or workforce management software is a strong plus',
       ],
+      openings: [
+        { title: 'Enterprise FinTech Sales Executive', location: 'National', file: 'job-descriptions/enterprise-fintech-sales-executive.docx', download: 'Enterprise FinTech Sales Executive.docx' },
+        { title: 'HCM & Payroll Sales Rep', location: 'Upstate, NY', file: 'job-descriptions/hcm-payroll-sales-rep-upstate-ny.docx', download: 'HCM Payroll Sales Rep Upstate NY.docx' },
+        { title: 'HCM Regional Sales Rep', location: 'West Coast', file: 'job-descriptions/hcm-regional-sales-rep-west-coast.docx', download: 'HCM Regional Sales Rep West Coast.docx' },
+        { title: 'PEO Sales Consultant', location: 'Dallas, TX', file: 'job-descriptions/peo-sales-consultant-dallas.docx', download: 'PEO Sales Consultant Dallas.docx' },
+        { title: 'PEO Sales Consultant', location: 'West Coast', file: 'job-descriptions/peo-sales-consultant-west.docx', download: 'PEO Sales Consultant West.docx' },
+        { title: 'Financial Advisor', location: 'National', file: 'job-descriptions/financial-advisor.docx', download: 'Financial Advisor.docx' },
+      ],
     },
     'technical-sales': {
       tag: 'Pre-Sales',
@@ -92,6 +107,10 @@
         'Excellent communication skills — able to translate complexity for non-technical audiences',
         'Experience with HCM, WFM, ERP, or payroll platforms strongly preferred',
         "Bachelor's degree in Computer Science, Engineering, or a related field preferred",
+      ],
+      openings: [
+        { title: 'HVAC Sales Engineer', location: 'Florida', file: 'job-descriptions/hvac-sales-engineer-florida.docx', download: 'HVAC Sales Engineer Florida.docx' },
+        { title: 'UKG Pro WFM Solutions Consultant', location: 'National', file: 'job-descriptions/ukg-pro-wfm-solutions-consultant.docx', download: 'UKG Pro WFM Solutions Consultant.docx' },
       ],
     },
     'entry-level-sales': {
@@ -116,6 +135,7 @@
         'Prior internship or experience in sales, customer service, or business development is a plus — but not required',
         'Interest in enterprise technology or B2B SaaS is a bonus',
       ],
+      openings: [],
     },
     'implementation-engineers': {
       tag: 'Technical',
@@ -139,6 +159,9 @@
         'Technical proficiency with APIs, SQL, or scripting languages is a strong plus',
         'PMP certification or relevant platform certifications are a bonus',
       ],
+      openings: [
+        { title: 'Embedded Firmware Engineer', location: 'National', file: 'job-descriptions/embedded-firmware-engineer.docx', download: 'Embedded Firmware Engineer.docx' },
+      ],
     },
   };
 
@@ -146,6 +169,23 @@
   var modalBody = document.getElementById('role-modal-body');
   var modal = document.getElementById('role-modal');
   var closeBtn = document.getElementById('role-modal-close');
+
+  function buildOpenings(openings) {
+    if (!openings || openings.length === 0) return '';
+    var rows = openings.map(function (o) {
+      return '<a class="modal-opening-item" href="' + o.file + '" download="' + o.download + '">' +
+               '<div class="modal-opening-info">' +
+                 '<span class="modal-opening-title">' + o.title + '</span>' +
+                 '<span class="modal-opening-loc">' + o.location + '</span>' +
+               '</div>' +
+               '<span class="modal-opening-dl">&#8595;&nbsp;Download JD</span>' +
+             '</a>';
+    }).join('');
+    return '<div class="role-modal-section role-modal-openings">' +
+             '<h4>Current Openings</h4>' +
+             '<div class="modal-openings-list">' + rows + '</div>' +
+           '</div>';
+  }
 
   function openModal(roleKey) {
     var role = ROLES[roleKey];
@@ -156,6 +196,7 @@
       '<h2 id="role-modal-title">' + role.title + '</h2>' +
       '<div class="role-modal-meta"><span>' + role.location + '</span><span>&middot;</span><span>' + role.level + '</span></div>' +
       '<p class="role-modal-overview">' + role.overview + '</p>' +
+      buildOpenings(role.openings) +
       '<div class="role-modal-section">' +
         '<h4>Responsibilities</h4>' +
         '<ul>' + role.responsibilities.map(function (r) { return '<li>' + r + '</li>'; }).join('') + '</ul>' +
