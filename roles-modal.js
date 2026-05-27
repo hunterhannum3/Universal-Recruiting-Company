@@ -271,7 +271,7 @@
     document.body.style.overflow = '';
   }
 
-  document.querySelectorAll('.role-card[data-role]').forEach(function (card) {
+  document.querySelectorAll('.job-card[data-role], .role-card[data-role]').forEach(function (card) {
     card.addEventListener('click', function () {
       openModal(card.getAttribute('data-role'));
     });

@@ -488,6 +488,33 @@ nav::after {
 .role-meta { font-size: 12px; color: var(--gray2); font-weight: 600; padding-top: 10px; border-top: 1px solid var(--gray); display: flex; gap: 14px; }
 .role-openings-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: #1a7a3c; border: 1.5px solid #0f5c2a; padding: 3px 9px; border-radius: 20px; margin-top: 2px; align-self: flex-start; }
 
+/* ── JOBS LIST ───────────────────────────────────────── */
+.jobs-list { display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
+
+.job-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: #fff;
+  border: 1px solid var(--gray);
+  border-top: none;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: background .15s, box-shadow .15s;
+}
+.job-card:first-child { border-top: 1px solid var(--gray); border-radius: 3px 3px 0 0; }
+.job-card:last-child  { border-radius: 0 0 3px 3px; }
+.job-card:hover { background: #f0f5ff; box-shadow: inset 4px 0 0 var(--navy); }
+
+.job-card-info { display: flex; align-items: center; gap: 14px; flex: 1; min-width: 0; flex-wrap: wrap; }
+.job-card-title { font-size: 15px; font-weight: 700; color: var(--navy); }
+.job-card-loc { font-size: 12px; font-weight: 600; color: var(--gray2); background: var(--gray); padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+.job-card .role-tag { margin: 0; }
+.job-card-cta { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--navyLight); white-space: nowrap; padding-left: 20px; flex-shrink: 0; }
+.job-card:hover .job-card-cta { color: var(--navy); }
+
 /* ── CURRENT OPENINGS ────────────────────────────────── */
 .openings-section {
   background: var(--offwhite);
