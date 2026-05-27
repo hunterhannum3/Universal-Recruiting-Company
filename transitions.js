@@ -6,6 +6,7 @@ document.addEventListener('click', function (e) {
   if (href.startsWith('http') || href.startsWith('//') ||
       href.startsWith('mailto') || href.startsWith('tel') ||
       href.startsWith('#')) return;
+  if (link.hasAttribute('download')) return;
 
   e.preventDefault();
   document.body.style.transition = 'opacity 0.2s ease';
