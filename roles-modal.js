@@ -153,10 +153,16 @@
       ],
       requirements: [
         '3–5 years of experience in B2B SaaS sales, preferably with AI, HR Tech, or IT Ops software',
-        'Strong understanding of SaaS, technical solutions, and AI concepts',
-        'Proven ability to run full-cycle discovery-to-close sales processes',
-        'Experience engaging mid-market and enterprise decision-makers',
-        'Excellent demo and presentation skills tailored to technical and non-technical audiences',
+        'Proven track record of closing mid-market or enterprise deals in a consultative sales environment',
+        'Ability to translate technical products into compelling business cases for non-technical stakeholders',
+        'Comfortable with CRM (HubSpot), sales automation tools, and virtual selling',
+        'Passion for helping customers succeed and an entrepreneurial mindset to thrive in a fast-paced startup',
+      ],
+      why: [
+        'Join a mission-driven company helping workplaces become more efficient and employee-centric',
+        'Shape the future of AI in the workplace — while growing your sales career in a cutting-edge SaaS business',
+        'Collaborate with a seasoned, supportive leadership team that values innovation and agility',
+        'Contract (1099) position compensated hourly with a generous commission rate — up to 50% of one-year contract value',
       ],
       openings: [
         { title: 'AI Technical Sales Rep', location: 'National', file: 'job-descriptions/ai-technical-sales-rep.docx', download: 'AI Technical Sales Rep.docx' },
@@ -240,7 +246,13 @@
       '<div class="role-modal-section">' +
         '<h4>Requirements</h4>' +
         '<ul>' + role.requirements.map(function (r) { return '<li>' + r + '</li>'; }).join('') + '</ul>' +
-      '</div>';
+      '</div>' +
+      (role.why && role.why.length ? (
+        '<div class="role-modal-section">' +
+          '<h4>Why Join Us</h4>' +
+          '<ul>' + role.why.map(function (r) { return '<li>' + r + '</li>'; }).join('') + '</ul>' +
+        '</div>'
+      ) : '');
 
     if (submitBtn && ROLE_TO_OPTION[roleKey]) {
       submitBtn.href = 'submit.html?role=' + encodeURIComponent(ROLE_TO_OPTION[roleKey]);
