@@ -138,6 +138,30 @@
       ],
       openings: [],
     },
+    'ai-technical-sales': {
+      tag: 'Pre-Sales',
+      title: 'AI Technical Sales Rep',
+      location: 'National',
+      level: 'Mid-Level',
+      overview: 'Transforming how companies deliver support to employees. Our AI-powered platform automates answers to employee questions, providing trusted, accurate, and compliant information through Smart Search AI Agents. Our latest innovation combines prescriptive and non-prescriptive answer frameworks, helping HR, IT, and Ops teams reduce helpdesk requests, improve productivity, and deliver measurable ROI.\n\nAs a Technical Sales Representative, you\'ll play a critical role in converting qualified top-of-funnel leads into high-intent prospects. You\'ll guide buyers through discovery, deliver tailored demos that map our AI capabilities to business needs, and strategically engage decision-makers with authority and budget to close within 90 days. Your deep understanding of SaaS, technical solutions, and AI concepts will build trust and momentum with mid-market and enterprise buyers.',
+      responsibilities: [
+        'Own the Sales Process for inbound leads and SDR-generated prospects — from discovery through demo to stakeholder engagement and handoff/close',
+        'Deliver Dynamic Product Demos that focus on solving real-world problems for HR, IT, and Business Ops leaders',
+        'Tailor Solutions to Prospect Needs by translating technical features into business value and ROI',
+        'Identify Decision-Makers and drive consensus-building with champions and buying committees',
+        'Maintain Pipeline Momentum by forecasting accurately, qualifying timelines, and proactively overcoming objections',
+      ],
+      requirements: [
+        '3–5 years of experience in B2B SaaS sales, preferably with AI, HR Tech, or IT Ops software',
+        'Strong understanding of SaaS, technical solutions, and AI concepts',
+        'Proven ability to run full-cycle discovery-to-close sales processes',
+        'Experience engaging mid-market and enterprise decision-makers',
+        'Excellent demo and presentation skills tailored to technical and non-technical audiences',
+      ],
+      openings: [
+        { title: 'AI Technical Sales Rep', location: 'National', file: 'job-descriptions/ai-technical-sales-rep.docx', download: 'AI Technical Sales Rep.docx' },
+      ],
+    },
     'implementation-engineers': {
       tag: 'Technical',
       title: 'Implementation & Software Engineers',
@@ -172,6 +196,7 @@
     'account-executives':       'Account Executive',
     'technical-sales':          'Sales Engineer / Presales',
     'entry-level-sales':        'Entry Level Sales',
+    'ai-technical-sales':       'Sales Engineer / Presales',
     'implementation-engineers': 'Implementation Specialist',
   };
 
