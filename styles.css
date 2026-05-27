@@ -330,7 +330,7 @@ nav::after {
 .hero-stat-lbl { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gray3); margin-top: 6px; display: block; }
 
 /* ── NAV CARDS ───────────────────────────────────────── */
-.career-conf-section { text-align: center; padding: 56px 24px 48px; border-top: 1px solid var(--gray); }
+.career-conf-section { text-align: center; padding: 56px 24px 40px; }
 .career-conf-text { font-size: 18px; color: var(--gray3); max-width: 620px; line-height: 1.75; margin: 12px auto 0; }
 
 .nav-cards-section { padding: 72px 48px; background: var(--offwhite); }
