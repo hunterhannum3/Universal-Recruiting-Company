@@ -109,6 +109,7 @@
         "Bachelor's degree in Computer Science, Engineering, or a related field preferred",
       ],
       openings: [
+        { title: 'AI Technical Sales Rep', location: 'National', file: 'job-descriptions/ai-technical-sales-rep.docx', download: 'AI Technical Sales Rep.docx' },
         { title: 'HVAC Sales Engineer', location: 'Florida', file: 'job-descriptions/hvac-sales-engineer-florida.docx', download: 'HVAC Sales Engineer Florida.docx' },
         { title: 'UKG Pro WFM Solutions Consultant', location: 'National', file: 'job-descriptions/ukg-pro-wfm-solutions-consultant.docx', download: 'UKG Pro WFM Solutions Consultant.docx' },
       ],
