@@ -471,7 +471,7 @@ nav::after {
   z-index: 0;
 }
 .roles-section > * { position: relative; z-index: 1; }
-.roles-inner { max-width: 1100px; }
+.roles-inner { max-width: 1200px; width: 100%; }
 
 .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--navyLight); margin-bottom: 10px; }
 .section-title { font-size: clamp(24px, 3vw, 38px); font-weight: 800; color: var(--navy); line-height: 1.15; margin-bottom: 12px; }
@@ -489,13 +489,13 @@ nav::after {
 .role-openings-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: #1a7a3c; border: 1.5px solid #0f5c2a; padding: 3px 9px; border-radius: 20px; margin-top: 2px; align-self: flex-start; }
 
 /* ── JOBS LIST ───────────────────────────────────────── */
-.jobs-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 8px; }
+.jobs-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 8px; width: 100%; }
 
 .job-card {
   position: relative;
   border: 1px solid #dde3ec;
   border-radius: 6px;
-  padding: 26px 22px;
+  padding: 30px 26px;
   background: #fff;
   display: flex;
   flex-direction: column;
