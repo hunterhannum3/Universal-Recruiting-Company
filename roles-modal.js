@@ -143,7 +143,7 @@
       title: 'AI Technical Sales Rep',
       location: 'National',
       level: 'Mid-Level',
-      overview: 'Transforming how companies deliver support to employees. Our AI-powered platform automates answers to employee questions, providing trusted, accurate, and compliant information through Smart Search AI Agents. Our latest innovation combines prescriptive and non-prescriptive answer frameworks, helping HR, IT, and Ops teams reduce helpdesk requests, improve productivity, and deliver measurable ROI.\n\nAs a Technical Sales Representative, you\'ll play a critical role in converting qualified top-of-funnel leads into high-intent prospects. You\'ll guide buyers through discovery, deliver tailored demos that map our AI capabilities to business needs, and strategically engage decision-makers with authority and budget to close within 90 days. Your deep understanding of SaaS, technical solutions, and AI concepts will build trust and momentum with mid-market and enterprise buyers.',
+      overview: '',
       responsibilities: [
         'Own the Sales Process for inbound leads and SDR-generated prospects — from discovery through demo to stakeholder engagement and handoff/close',
         'Deliver Dynamic Product Demos that focus on solving real-world problems for HR, IT, and Business Ops leaders',
@@ -237,7 +237,7 @@
       '<span class="role-tag">' + role.tag + '</span>' +
       '<h2 id="role-modal-title">' + role.title + '</h2>' +
       '<div class="role-modal-meta"><span>' + role.location + '</span><span>&middot;</span><span>' + role.level + '</span></div>' +
-      '<p class="role-modal-overview">' + role.overview + '</p>' +
+      (role.overview ? '<p class="role-modal-overview">' + role.overview + '</p>' : '') +
       buildOpenings(role.openings) +
       '<div class="role-modal-section">' +
         '<h4>Responsibilities</h4>' +

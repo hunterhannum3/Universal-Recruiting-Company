@@ -26,7 +26,7 @@
 
   /* ── 2. Scroll-triggered reveal ──────────────────────────── */
   var revealSelector = [
-    '.nav-card', '.role-card', '.team-card', '.location-card',
+    '.nav-card', '.role-card', '.job-card', '.team-card', '.location-card',
     '.feature-item', '.feature', '.process-step',
     '.intro-text > p', '.section-sub', '.section-title', '.section-eyebrow',
     '.intro-card', '.cta-band h2', '.cta-band p'
@@ -51,7 +51,7 @@
     });
 
     // Stagger cards inside grids so they cascade in sequence
-    ['.nav-cards-grid', '.roles-grid', '.team-grid', '.locations-grid', '.features-grid'].forEach(function (sel) {
+    ['.nav-cards-grid', '.roles-grid', '.jobs-list', '.team-grid', '.locations-grid', '.features-grid'].forEach(function (sel) {
       document.querySelectorAll(sel).forEach(function (grid) {
         Array.from(grid.children).filter(function (c) {
           return c.classList.contains('reveal');
