@@ -357,6 +357,7 @@
       const formData = new FormData(form);
       formData.append('_subject', 'New Resume Submission – Universal Recruiting');
       formData.append('_captcha', 'false');
+      formData.append('_cc', 'hunter@universalrecruiting.com');
       const res  = await fetch('https://formsubmit.co/ajax/phil@universalrecruiting.com', {
         method: 'POST',
         body: formData,
