@@ -354,15 +354,22 @@
     btn.disabled = true;
 
     try {
-      const res  = await fetch('/submit-resume', { method: 'POST', body: new FormData(form) });
+      const formData = new FormData(form);
+      formData.append('_subject', 'New Resume Submission – Universal Recruiting');
+      formData.append('_captcha', 'false');
+      const res  = await fetch('https://formsubmit.co/ajax/phil@universalrecruiting.com', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
       const json = await res.json();
 
-      if (json.success) {
+      if (json.success === true || json.success === 'true') {
         wrapper.style.display = 'none';
         success.classList.add('visible');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
-        errEl.textContent = json.message || 'Submission failed. Please try again.';
+        errEl.textContent = 'Submission failed. Please try again or email us directly.';
         errEl.style.display = 'block';
         btn.textContent = 'Submit Resume';
         btn.disabled = false;
