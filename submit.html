@@ -162,7 +162,11 @@
     <!-- Form -->
     <div id="form-wrapper">
 
-      <form id="resume-form" enctype="multipart/form-data" novalidate>
+      <form id="resume-form" action="https://formsubmit.co/phil@universalrecruiting.com" method="POST" enctype="multipart/form-data" novalidate>
+        <input type="hidden" name="_subject" value="New Resume Submission – Universal Recruiting" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_cc" value="hunter@universalrecruiting.com" />
+        <input type="hidden" name="_next" value="https://hunterhannum3.github.io/Universal-Recruiting-Company/submit.html?submitted=true" />
 
         <!-- Name / Email -->
         <div class="form-grid-2">
@@ -334,8 +338,7 @@
     }
   });
 
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
+  form.addEventListener('submit', function(e) {
     errEl.style.display = 'none';
 
     const nameEl  = form.querySelector('[name="name"]');
@@ -348,40 +351,16 @@
     if (!roleEl.value)         { markError(roleEl);  invalid = true; }
     if (!input.files[0])       { markError(drop);    invalid = true; }
 
-    if (invalid) return;
+    if (invalid) { e.preventDefault(); return; }
 
     btn.textContent = 'Submitting…';
     btn.disabled = true;
-
-    try {
-      const formData = new FormData(form);
-      formData.append('_subject', 'New Resume Submission – Universal Recruiting');
-      formData.append('_captcha', 'false');
-      formData.append('_cc', 'hunter@universalrecruiting.com');
-      const res  = await fetch('https://formsubmit.co/ajax/phil@universalrecruiting.com', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-      const json = await res.json();
-
-      if (json.success === true || json.success === 'true') {
-        wrapper.style.display = 'none';
-        success.classList.add('visible');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        errEl.textContent = 'Submission failed. Please try again or email us directly.';
-        errEl.style.display = 'block';
-        btn.textContent = 'Submit Resume';
-        btn.disabled = false;
-      }
-    } catch {
-      errEl.textContent = 'Network error. Please try again or email us directly.';
-      errEl.style.display = 'block';
-      btn.textContent = 'Submit Resume';
-      btn.disabled = false;
-    }
   });
+
+  if (new URLSearchParams(window.location.search).get('submitted') === 'true') {
+    wrapper.style.display = 'none';
+    success.classList.add('visible');
+  }
 </script>
 
 <script src="transitions.js"></script>
